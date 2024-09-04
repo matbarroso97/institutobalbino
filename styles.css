@@ -5,7 +5,6 @@ body {
     padding: 0;
     background-color: #f5f5f5;
     color: #333;
-    overflow-x: hidden; /* Evita overflow horizontal */
 }
 
 /* Reset global para garantir que margens e paddings padrão não causem problemas */
@@ -19,8 +18,6 @@ body {
 header.banner {
     margin: 0;
     padding: 0; /* Remove qualquer padding */
-    max-width: 100%; /* Garante que o banner não exceda a largura da tela */
-    overflow-x: hidden;
 }
 
 header.banner img {
@@ -32,7 +29,6 @@ header.banner img {
     padding: 0; /* Remove qualquer padding */
 }
 
-/* Estilos para a navegação */
 nav {
     background-color: #333;
     padding: 10px;
@@ -45,7 +41,6 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Garante que o conteúdo não saia da tela */
 }
 
 nav ul li {
@@ -72,26 +67,128 @@ nav ul li a.active {
     transform: scale(1.1);
 }
 
-/* Estilos para a galeria de fotos e vídeos */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Espaçamento entre as fotos e vídeos */
-    justify-content: space-between; /* Garante que o espaço seja distribuído uniformemente */
-    align-items: flex-start;
+/* Remove margens e paddings adicionais do main */
+main {
+    padding: 20px;
+    margin: 0;
 }
 
-.gallery .photos, .gallery .videos {
-    flex: 1 1 calc(50% - 20px); /* Distribui igualmente, com espaço entre os itens */
+/* Estilos para a página de início */
+.boas-vindas {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.boas-vindas h2 {
+    color: #000000;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2em; /* Define o mesmo tamanho de fonte dos outros títulos */
+}
+
+.boas-vindas p {
+    text-align: justify;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+/* Estilo para a seção de destaques */
+.destaques {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.destaques h2 {
+    font-size: 2em;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.destaques ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.destaques ul li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Estilo para a seção de chamada para ação */
+.chamada-para-acao {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
+.chamada-para-acao h2 {
+    font-size: 2em;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.chamada-para-acao p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.chamada-para-acao .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4caf5c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.chamada-para-acao .btn:hover {
+    background-color: #0dd317;
+    transform: scale(1.05);
+}
+
+h2 {
+    text-align: center; /* Centraliza o texto */
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+/* Estilo para a galeria de fotos e vídeos */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.gallery .photos, .gallery .videos {
+    flex: 1;
+    text-align: center;
+    margin: 20px 0;
+}
+
 .gallery img, .gallery video {
-    width: 100%; /* Garante que imagens e vídeos ocupem 100% da largura do contêiner */
+    width: 150px; /* Definir como miniaturas */
     height: auto;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    cursor: pointer;
+    cursor: pointer; /* Cursor de clique para indicar que a imagem pode ser ampliada */
     transition: transform 0.3s ease;
 }
 
@@ -99,27 +196,87 @@ nav ul li a.active {
     transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
 }
 
-/* Garantir que vídeos e imagens fiquem proporcionais */
-.gallery video {
-    object-fit: cover; /* Garante que o vídeo preencha o contêiner sem distorção */
-    height: auto; /* Mantém a altura proporcional */
+.gallery img:active, .gallery video:active {
+    transform: scale(0.95); /* Pequeno efeito de compressão ao clicar */
 }
 
-/* Ocultar qualquer vídeo fantasma ou duplicado */
-.gallery video[hidden] {
-    display: none;
+/* Manter a proporção e tamanho dos vídeos */
+.gallery video {
+    width: 150px;
+    height: 100px;
+    object-fit: cover; /* Garante que o vídeo preencha o contêiner, mantendo a proporção */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+/* Estilo para a exibição em tela cheia */
+.fullscreen-overlay {
+    display: none; /* Oculto por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.fullscreen-overlay img, .fullscreen-overlay video {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+}
+
+.fullscreen-overlay .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Estilo para o rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    width: 100%;
 }
 
 /* Responsividade para a galeria em telas menores */
 @media (max-width: 768px) {
     .gallery {
         flex-direction: column;
-        align-items: center; /* Centraliza os itens no mobile */
     }
 
-    .gallery .photos, .gallery .videos {
-        width: 100%; /* Em telas menores, as fotos e vídeos ocupam 100% da largura */
-        margin-bottom: 20px; /* Adiciona espaçamento entre as seções de fotos e vídeos */
+    .photos, .videos {
+        min-width: 100%;
     }
 }
 
