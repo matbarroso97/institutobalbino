@@ -72,161 +72,54 @@ nav ul li a.active {
     transform: scale(1.1);
 }
 
-/* Estilos para a página de início */
-.boas-vindas {
-    background-color: #f9f9f9;
-    padding: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.boas-vindas h2 {
-    color: #000000;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 2em; /* Define o mesmo tamanho de fonte dos outros títulos */
-}
-
-.boas-vindas p {
-    text-align: justify;
-    margin-bottom: 15px;
-    line-height: 1.6;
-    font-size: 1.1em;
-}
-
-/* Estilo para a seção de destaques */
-.destaques {
-    background-color: #f9f9f9;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.destaques h2 {
-    font-size: 2em;
-    color: #000000;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.destaques ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.destaques ul li {
-    margin-bottom: 10px;
-    font-size: 1.1em;
-    line-height: 1.6;
-}
-
-/* Estilo para a seção de chamada para ação */
-.chamada-para-acao {
-    background-color: #f9f9f9;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.chamada-para-acao h2 {
-    font-size: 2em;
-    color: #000000;
-    margin-bottom: 20px;
-}
-
-.chamada-para-acao p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.chamada-para-acao .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #4caf5c;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.chamada-para-acao .btn:hover {
-    background-color: #0dd317;
-    transform: scale(1.05);
-}
-
-h2 {
-    text-align: center; /* Centraliza o texto */
-    color: #000000;
-    margin-bottom: 20px;
-}
-
-/* Estilo para a galeria de fotos e vídeos */
+/* Estilos para a galeria de fotos e vídeos */
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
+    gap: 20px; /* Espaçamento entre as fotos e vídeos */
+    justify-content: space-between; /* Garante que o espaço seja distribuído uniformemente */
+    align-items: flex-start;
 }
 
 .gallery .photos, .gallery .videos {
-    flex: 1;
+    flex: 1 1 calc(50% - 20px); /* Distribui igualmente, com espaço entre os itens */
     text-align: center;
-    margin: 20px 0;
 }
 
 .gallery img, .gallery video {
-    width: 150px; /* Definir como miniaturas */
+    width: 100%; /* Garante que imagens e vídeos ocupem 100% da largura do contêiner */
     height: auto;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    cursor: pointer; /* Cursor de clique para indicar que a imagem pode ser ampliada */
+    cursor: pointer;
     transition: transform 0.3s ease;
-    max-width: 100%; /* Garante que as imagens não excedam a largura da tela */
 }
 
 .gallery img:hover, .gallery video:hover {
     transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
 }
 
-.gallery img:active, .gallery video:active {
-    transform: scale(0.95); /* Pequeno efeito de compressão ao clicar */
+/* Garantir que vídeos e imagens fiquem proporcionais */
+.gallery video {
+    object-fit: cover; /* Garante que o vídeo preencha o contêiner sem distorção */
+    height: auto; /* Mantém a altura proporcional */
+}
+
+/* Ocultar qualquer vídeo fantasma ou duplicado */
+.gallery video[hidden] {
+    display: none;
 }
 
 /* Responsividade para a galeria em telas menores */
 @media (max-width: 768px) {
     .gallery {
         flex-direction: column;
+        align-items: center; /* Centraliza os itens no mobile */
     }
 
-    .photos, .videos {
-        min-width: 100%;
-    }
-}
-
-/* Ajustes para telas maiores que 480px e até 768px */
-@media (min-width: 481px) and (max-width: 768px) {
-    .gallery img, .gallery video {
-        width: 120px; /* Ajuste para telas entre 481px e 768px */
-    }
-
-    .chamada-para-acao .btn {
-        padding: 12px 18px; /* Ajusta o tamanho dos botões */
-    }
-
-    .boas-vindas, .destaques {
-        padding: 15px; /* Reduz o padding para caber melhor */
-    }
-
-    nav ul li a {
-        font-size: 1.1em; /* Tamanho da fonte intermediário */
+    .gallery .photos, .gallery .videos {
+        width: 100%; /* Em telas menores, as fotos e vídeos ocupam 100% da largura */
+        margin-bottom: 20px; /* Adiciona espaçamento entre as seções de fotos e vídeos */
     }
 }
 
