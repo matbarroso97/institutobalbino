@@ -7,18 +7,32 @@ body {
     color: #333;
 }
 
+/* Reset global para garantir que margens e paddings padrão não causem problemas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Estilo para o banner */
+header.banner {
+    margin: 0;
+    padding: 0; /* Remove qualquer padding */
+}
+
 header.banner img {
     width: 100%; /* Define para ocupar 100% da largura da tela */
     max-width: 1400px; /* Define uma largura máxima para o banner */
     height: auto; /* Mantém a proporção correta da imagem */
     display: block;
-    margin: 0 auto; /* Centraliza o banner horizontalmente */
+    margin: 0; /* Remove margens indesejadas */
+    padding: 0; /* Remove qualquer padding */
 }
 
 nav {
     background-color: #333;
     padding: 10px;
+    margin: 0;
 }
 
 nav ul {
@@ -53,8 +67,10 @@ nav ul li a.active {
     transform: scale(1.1);
 }
 
+/* Remove margens e paddings adicionais do main */
 main {
     padding: 20px;
+    margin: 0;
 }
 
 /* Estilos para a página de início */
@@ -147,15 +163,11 @@ main {
     transform: scale(1.05);
 }
 
-
-
 h2 {
     text-align: center; /* Centraliza o texto */
     color: #000000;
     margin-bottom: 20px;
 }
-
-
 
 /* Estilo para a galeria de fotos e vídeos */
 .gallery {
@@ -228,8 +240,6 @@ h2 {
     cursor: pointer;
 }
 
-
-
 /* Estilo para o rodapé */
 footer {
     background-color: #333;
@@ -270,10 +280,6 @@ main {
     }
 }
 
-
-/* Importar a fonte do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 /* Estilo para a seção institucional */
 .institucional {
     max-width: 800px; /* Define uma largura máxima para o texto */
@@ -297,3 +303,6 @@ main {
     text-align: justify; /* Justifica o texto para alinhar os dois lados */
     margin-bottom: 15px; /* Adiciona espaçamento entre os parágrafos */
 }
+
+/* Importar a fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
