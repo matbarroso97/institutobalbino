@@ -4,55 +4,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instituto Balbino Fé com Obras</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="icone.png" type="image/x-icon">
-
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/images/icone.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header class="banner">
-        <img src="foto1.png" alt="Banner do Instituto Balbino">
+    <!-- Header com Logo -->
+    <header class="hero">
+        <div class="hero-background">
+            <div class="hero-pattern"></div>
+        </div>
+        <div class="hero-content">
+            <div class="logo-container">
+                <img src="assets/images/foto1.png" alt="Instituto Balbino Fé com Obras" class="hero-logo">
+            </div>
+            <div class="hero-text">
+                <h1>Instituto Balbino Fé com Obras</h1>
+                <p class="hero-subtitle">Desenvolvendo comunidades desde 2010</p>
+                <p class="hero-description">Promovendo educação, cultura e inclusão social no Rio de Janeiro e África</p>
+            </div>
+        </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html" class="active">Início</a></li>
-            <li><a href="sobre.html">Sobre Nós</a></li>
-            <li><a href="galeria.html">Galeria</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
+    <!-- Navegação -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span>Instituto Balbino</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/sobre.html" class="nav-link">Sobre Nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/galeria.html" class="nav-link">Galeria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/contato.html" class="nav-link">Contato</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
     </nav>
 
-    <main>
-        <section class="boas-vindas fade-in-up">
-            <h2>Bem-vindo ao Instituto Balbino Fé com Obras</h2>
-            <p>Desde 2010, o Instituto Balbino Fé com Obras está comprometido em ajudar as comunidades carentes, promovendo a solidariedade, o amor ao próximo e a inclusão social. Nosso objetivo é proporcionar um ambiente seguro e enriquecedor onde crianças, adolescentes e idosos possam desenvolver suas habilidades e alcançar uma melhor qualidade de vida.</p>
-            <p>Com uma visão cristã e valores centrados na solidariedade, atuamos em diversas áreas, como educação, distribuição de alimentos e assistência familiar. Nosso trabalho é guiado pelo desejo de combater a exclusão social e ajudar aqueles que estão em situação de vulnerabilidade, sempre com respeito e dignidade.</p>
-            <p>Com o apoio de parceiros e da comunidade, realizamos atividades culturais, educacionais e de qualificação profissional que impactam diretamente a vida dos nossos beneficiários. Além disso, temos um projeto social voltado para a alimentação de crianças em áreas carentes da África.</p>
-            <p>Para mais informações, leia a seção "Sobre Nós" ou entre em contato conosco. Estamos aqui para fazer a diferença juntos!</p>
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <!-- Seção de Boas-vindas -->
+        <section class="welcome-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Bem-vindo ao Instituto Balbino Fé com Obras</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="welcome-content">
+                    <p>Desde 2010, o Instituto Balbino Fé com Obras está comprometido em ajudar as comunidades carentes, promovendo a solidariedade, o amor ao próximo e a inclusão social. Nosso objetivo é proporcionar um ambiente seguro e enriquecedor onde crianças, adolescentes e idosos possam desenvolver suas habilidades e alcançar uma melhor qualidade de vida.</p>
+                    <p>Com uma visão cristã e valores centrados na solidariedade, atuamos em diversas áreas, como educação, distribuição de alimentos e assistência familiar. Nosso trabalho é guiado pelo desejo de combater a exclusão social e ajudar aqueles que estão em situação de vulnerabilidade, sempre com respeito e dignidade.</p>
+                    <p>Com o apoio de parceiros e da comunidade, realizamos atividades culturais, educacionais e de qualificação profissional que impactam diretamente a vida dos nossos beneficiários. Além disso, temos um projeto social voltado para a alimentação de crianças em áreas carentes da África.</p>
+                </div>
+            </div>
         </section>
 
-        <section class="destaques">
-            <h2>Nossos Destaques</h2>
-            <ul>
-                <li><strong>Atividades Educacionais:</strong> Oferecemos aulas de reforço escolar, atividades culturais e cursos de capacitação profissional para jovens e adultos.</li>
-                <li><strong>Inclusão Social:</strong> Promovemos a integração social de crianças, adolescentes e idosos, combatendo a evasão escolar, o uso de drogas e a criminalidade, sempre com foco na solidariedade e no fortalecimento da cidadania.</li>
-                <li><strong>Parcerias Estratégicas:</strong> Estabelecemos parcerias com empresas, igrejas, órgãos do governo e pessoas físicas. Qualquer pessoa pode contribuir, seja com doações ou voluntariado, para garantir o sucesso de nossas ações e expandir nosso impacto social.</li>
-                <li><strong>Expansão de Atendimentos:</strong> Estamos em fase de construção de um novo espaço com salas para cursos profissionalizantes e consultórios médicos e odontológicos, onde todos os atendimentos serão oferecidos gratuitamente à comunidade.</li>
-                <li><strong>Projeto Social na África:</strong> Atuamos em comunidades carentes no continente africano, oferecendo refeições para crianças em situação de extrema pobreza.</li>
-            </ul>
-        </section>
-
-        <section class="chamada-para-acao">
-            <h2>Como Você Pode Ajudar</h2>
-            <p>Participe das nossas ações! Você pode contribuir de várias formas, seja com doações, voluntariado ou estabelecendo parcerias. Juntos, podemos fazer a diferença na vida de muitas pessoas.</p>
-            <a href="contato.html" class="btn">Entre em Contato</a>
+        <!-- Seção de Destaques -->
+        <section class="highlights-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Nossos Destaques</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="highlights-grid">
+                    <div class="highlight-card">
+                        <div class="card-icon">📚</div>
+                        <h3>Atividades Educacionais</h3>
+                        <p>Oferecemos aulas de reforço escolar, atividades culturais e cursos de capacitação profissional para jovens e adultos.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="card-icon">🤝</div>
+                        <h3>Inclusão Social</h3>
+                        <p>Promovemos a integração social de crianças, adolescentes e idosos, combatendo a evasão escolar e fortalecendo a cidadania.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="card-icon">🤝</div>
+                        <h3>Parcerias Estratégicas</h3>
+                        <p>Estabelecemos parcerias com empresas, igrejas, órgãos do governo e pessoas físicas para expandir nosso impacto social.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="card-icon">🏥</div>
+                        <h3>Expansão de Atendimentos</h3>
+                        <p>Construção de novo espaço com salas para cursos profissionalizantes e consultórios médicos e odontológicos gratuitos.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="card-icon">🌍</div>
+                        <h3>Projeto Social na África</h3>
+                        <p>Atuamos em comunidades carentes no continente africano, oferecendo refeições para crianças em situação de extrema pobreza.</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>© 2024 Instituto Balbino Fé com Obras - Todos os direitos reservados</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Instituto Balbino Fé com Obras</h3>
+                    <p>Transformando vidas através da solidariedade e inclusão social desde 2010.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="pages/sobre.html">Sobre Nós</a></li>
+                        <li><a href="pages/galeria.html">Galeria</a></li>
+                        <li><a href="pages/contato.html">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Instituto Balbino Fé com Obras - Todos os direitos reservados</p>
+            </div>
+        </div>
     </footer>
 
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

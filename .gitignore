@@ -1,0 +1,23 @@
+# Arquivos de desenvolvimento
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+
+# Arquivos de backup
+*.bak
+*.backup
+
+# Arquivos de IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node modules (se usar build tools)
+node_modules/
+npm-debug.log*
+
+# Arquivos de build
+dist/
+build/
