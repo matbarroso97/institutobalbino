@@ -64,11 +64,6 @@ institutobalbino/
 - Fechamento automático ao clicar em links
 - Indicador visual da página ativa
 
-### Hero Section
-- Banner full-screen responsivo
-- Overlay com gradiente
-- Texto centralizado com animações
-- Efeito parallax sutil
 
 ### Galeria
 - Grid responsivo para imagens
@@ -81,43 +76,6 @@ institutobalbino/
 - Hover effects nos cards
 - Transições suaves
 - Animações de entrada
-
-## 🚀 Como Usar
-
-1. Abra o arquivo `index.html` em um navegador
-2. Navegue pelas páginas usando o menu
-3. Teste a responsividade redimensionando a janela
-4. No mobile, use o menu hambúrguer para navegar
-
-## 📝 Páginas
-
-- **Início**: Apresentação do instituto e destaques
-- **Sobre Nós**: Missão, visão e valores
-- **Galeria**: Fotos e vídeos das atividades
-- **Contato**: Informações de contato e localização
-
-## 🔧 Personalização
-
-### Cores
-Edite as variáveis CSS no arquivo `assets/css/style.css`:
-
-```css
-:root {
-    --primary-color: #2c5530;
-    --secondary-color: #4caf5c;
-    --accent-color: #45a049;
-    /* ... outras variáveis */
-}
-```
-
-### Conteúdo
-Edite os arquivos HTML para alterar textos e informações.
-
-### Imagens
-Substitua as imagens na pasta `assets/images/` mantendo os mesmos nomes.
-
-## 📞 Suporte
-
 Para dúvidas ou sugestões sobre o site, entre em contato através da página de contato.
 
 ---
